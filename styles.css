@@ -1,0 +1,40 @@
+h1 {
+    text-align: center;
+}
+
+.container {
+    background-color: var(--clr-black);
+    padding-block: 1rem;
+}
+
+.marker {
+    width: 200px;
+    height: 25px;
+    margin-inline: auto;
+    margin-block: 1rem;
+}
+
+.red {
+    background: linear-gradient(
+        180deg, 
+        hsl(343, 79%, 27%),
+        hsl(343, 90%, 60%),
+        hsl(343, 71%, 37%)
+        );
+}
+.green {
+    background: linear-gradient(
+        180deg, 
+        hsl(120, 79%, 27%),
+        hsl(120, 90%, 60%),
+        hsl(120, 71%, 37%)
+        );
+}
+.blue {
+    background: linear-gradient(
+        180deg, 
+        hsl(240, 79%, 27%),
+        hsl(240, 90%, 60%),
+        hsl(240, 71%, 37%)
+        );
+}
