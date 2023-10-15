@@ -7,6 +7,7 @@
 body{
     margin: 0;
     padding: 0;
+    background: wheat;
 }
 
 h1 {
@@ -66,5 +67,19 @@ h1 {
 
 #canvas {
     border: black 2px solid;
+    background: url(./Desktop\ -\ 1\ \(1\).svg);
+    background-size: cover;
+    mix-blend-mode: difference;
 }
 
+
+.eraser {
+    width: 100px;
+    aspect-ratio: 1;
+    border:solid black 2px;
+    box-shadow: inset 2px 2px 2px 2px grey;
+}
+
+#eraser-checkbox{
+    display: none;
+}

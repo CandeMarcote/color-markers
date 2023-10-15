@@ -6,8 +6,10 @@ const markers = document.querySelectorAll(".marker");
 
 const canvas = document.getElementById("canvas");
 const context = canvas.getContext("2d");
-canvas.height = window.innerHeight;
-canvas.width = window.innerWidth;
+// canvas.height = window.innerHeight;
+// canvas.width = window.innerWidth;
+context.fillStyle = "white";
+context.fillRect(0, 0, canvas.width, canvas.height);
 
 let isDrawing = false;
 let selectedMarker = "red";
@@ -53,3 +55,21 @@ canvas.addEventListener("mouseup", () => {
     context.beginPath();
 });
 canvas.addEventListener("mousemove", drawing);
+
+function erase(e) {
+        if (e.target.parentNode.classList.contains("red")) {
+            // selectedMarker = "red";
+            canvas.style.backgroundColor = selectedMarker;
+        } else if (e.target.parentNode.classList.contains("blue")){
+            // selectedMarker = "blue";
+            canvas.style.backgroundColor = selectedMarker;
+        } else {
+            // selectedMarker = "green";
+            canvas.style.backgroundColor = selectedMarker;
+        }
+    
+    context.globalCompositeOperation="destination-out";
+}
+
+const eraser = document.querySelector(".eraser");
+eraser.addEventListener("click", erase);
